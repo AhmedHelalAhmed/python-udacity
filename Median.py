@@ -16,23 +16,14 @@ def biggest(a,b,c):
 def median(number1,number2,number3):
     biggest_number=biggest(number1,number2,number3)
     if biggest_number == number1 :
-        second_greater_one=bigger(number2,number3)
-        if second_greater_one == number2 :
-            return number2
-        else :
-            return number3
+        return bigger(number2,number3)
+
     elif biggest_number == number2:
-        second_greater_one = bigger(number1,number3)
-        if second_greater_one == number1 :
-            return number1
-        else :
-            return number3
+        return bigger(number1,number3)
+
     else :
-        second_greater_one = bigger(number1,number2)
-        if second_greater_one == number1 :
-            return number1
-        else :
-            return number2
+        return bigger(number1,number2)
+
 
 
 
