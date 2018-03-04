@@ -38,8 +38,6 @@ def process_madlib(mad_lib):
     current_location = 0
     while current_location <= len(mad_lib)-1 :
         end_location=current_location+4
-        if end_location >= len(mad_lib)-4 :
-            end_location=len(mad_lib)
         processed+=word_transformer(mad_lib[current_location:end_location])
         if(
             mad_lib[current_location:end_location] == "NOUN"
