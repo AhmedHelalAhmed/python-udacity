@@ -7,7 +7,6 @@
 from random import randint
 
 
-
 def random_verb():
     random_num = randint(0, 1)
     if random_num == 0:
@@ -36,23 +35,22 @@ def word_transformer(word):
 def process_madlib(mad_lib):
     processed = ""
     current_location = 0
-    while current_location <= len(mad_lib)-1 :
-        end_location=current_location+4
-        processed+=word_transformer(mad_lib[current_location:end_location])
-        if(
-            mad_lib[current_location:end_location] == "NOUN"
-            or
-            mad_lib[current_location:end_location] == "VERB"
-        ) :
+    box_length = 4
+    while current_location <= len(mad_lib) - 1:
+        end_location = current_location + box_length
+        processed += word_transformer(mad_lib[current_location:end_location])
+        if (
+                mad_lib[current_location:end_location] == "NOUN"
+                or
+                mad_lib[current_location:end_location] == "VERB"
+        ):
             current_location += 4
         else:
             current_location += 1
     return processed
 
-
     # you may find the built-in len function useful for this quiz
     # documentation: https://docs.python.org/2/library/functions.html#len
-
 
 
 test_string_1 = "This is a good NOUN to use when you VERB your food"
