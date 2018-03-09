@@ -15,8 +15,8 @@ for country in countries:
     if country[0] == "India":
         print country[1]
         break
-
-
+#or
+print countries[1][1]
 # Note that the capital of India is actually New Delhi
 # (which is contained in the region of Delhi).
 # In my defense, the capital of the United States is actually the "District of Columbia",
