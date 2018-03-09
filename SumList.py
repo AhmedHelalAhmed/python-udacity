@@ -14,6 +14,16 @@ def sum_list(list):
     return sum
 
 
+
+def sum_list(list):
+    sum = 0
+    for e in list:
+        sum += e
+    return sum
+
+
+
+
 print sum_list([1, 7, 4])
 # >>> 12
 
