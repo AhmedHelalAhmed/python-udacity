@@ -8,13 +8,18 @@
 # If there is no matching element,
 # return -1.
 
+# def find_element(input_list,input_target):
+#     if input_target in input_list:
+#         return input_list.index(input_target)
+#     else :
+#         return -1
+
+
 def find_element(input_list,input_target):
-    if input_target in input_list:
-        return input_list.index(input_target)
-    else :
+    if input_target not in input_list:
         return -1
-
-
+    else :
+        return input_list.index(input_target)
 
 
 
