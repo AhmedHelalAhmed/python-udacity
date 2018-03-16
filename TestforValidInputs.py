@@ -39,17 +39,19 @@ def daysBetweenDates(year1, month1, day1, year2, month2, day2):
        and year2/month2/day2. Assumes inputs are valid dates
        in Gregorian calendar."""
     # program defensively! Add an assertion if the input is not valid!
-    if year2 < year1:
-        return "AssertionError"
-    if year2 == year1:
-        if month2 < month1:
-            return "AssertionError"
-        if month2 == month1 :
-            if day2 < day1:
-                return "AssertionError"
-    if month1 > 12 or month2 > 12:
-        return "AssertionError"
-
+    #mannual work
+    # if year2 < year1:
+    #     return "AssertionError"
+    # if year2 == year1:
+    #     if month2 < month1:
+    #         return "AssertionError"
+    #     if month2 == month1 :
+    #         if day2 < day1:
+    #             return "AssertionError"
+    # if month1 > 12 or month2 > 12:
+    #     return "AssertionError"
+    #assert not dateIsBefore(year2, month2, day2, year1, month1, day1)
+    assert dateIsBefore(year1, month1, day1, year2, month2, day2)
     days = 0
     while dateIsBefore(year1, month1, day1, year2, month2, day2):
         year1, month1, day1 = nextDay(year1, month1, day1)
