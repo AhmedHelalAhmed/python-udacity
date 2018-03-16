@@ -41,6 +41,12 @@ def daysBetweenDates(year1, month1, day1, year2, month2, day2):
     # program defensively! Add an assertion if the input is not valid!
     if year2 < year1:
         return "AssertionError"
+    if year2 == year1:
+        if month2 < month1:
+            return "AssertionError"
+        if month2 == month1 :
+            if day2 < day1:
+                return "AssertionError"
     if month1 > 12 or month2 > 12:
         return "AssertionError"
 
@@ -72,3 +78,15 @@ def test():
 
 
 test()
+
+
+# Nice job! Test case nextDay(2012, 1, 1) is correct!
+# Nice job! Test case nextDay(2012, 4, 30) is correct!
+# Nice job! Test case nextDay(2012, 12, 1) is correct!
+# Nice job! Test case nextDay(1999, 12, 31) is correct!
+# Nice job! Test case nextDay(2012, 12, 31) is correct!
+# Nice job! Test case daysBetweenDates(2012, 9, 30, 2012, 10, 30) is correct!
+# Nice job! Test case daysBetweenDates(2012, 1, 1, 2013, 1, 1) is correct!
+# Nice job! Test case daysBetweenDates(2013, 1, 1, 1999, 12, 31) is correct!
+# Nice job! Test case daysBetweenDates(1991, 3, 1, 1991, 1, 3) is correct!
+# Nice job! Test case daysBetweenDates(1991, 3, 1, 1991, 4, 1) is correct!
