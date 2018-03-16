@@ -97,3 +97,42 @@ def test():
     print "Tests done"
 
 test()
+
+# draft
+# (day1,month1,year1,day2,month2,year2)
+# (24,1,2013,29,6,2013)
+# 29/6/2013
+# 24/1/2013
+# ===========
+# january => 24-31=7
+# where 31 is the days in january
+# february => 28
+# march => 31
+# april => 30
+# may => 31
+# june => 29
+# ===========
+# 156 days
+# ===========
+# days between this dates
+# 5/5/0
+# ===========
+# for years
+# 2013 - 2024
+# leap year => 366
+# normal year => 365
+# 2013 => 365
+# 2024 => 366
+# ===========
+# (day1,month1,year1,day2,month2,year2)
+# algorithm
+# days = #of days in month1 - day1
+# days = 31 - 24 = 7
+# month1 + = 1
+# while month1 < month2 :
+#       days + =# of days in month1
+#       month1 + = 1
+# days + = day2
+# while year1 < year2 :
+# 	add number od days at that year
+# ===========
