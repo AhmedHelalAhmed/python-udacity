@@ -10,7 +10,7 @@ def rename_files():
         print "New name : ",file_name.translate(None,'0123456789')
         os.rename(r"./prank/"+file_name,r"./prank/"+file_name.translate(None,'0123456789'))
 
-rename_files()  #keys are in the closet. behind the shoe box 
+rename_files()  #keys are in the closet. behind the shoe box
 
 #https://www.youtube.com/watch?v=rDzq5zr5r98&feature=share
 #https://stackoverflow.com/questions/3207219/how-do-i-list-all-files-of-a-directory
